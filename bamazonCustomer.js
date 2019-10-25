@@ -40,7 +40,8 @@ function displayInventory (response){
     console.log(itemId +' | '+ productName +' | '+ departmentName +' | '+ price +' | '+ stock + '\n');
    
     }
-    console.log('-----------------------------------------------');
+    console.log('-----------------------------------------------' + '\n');
+    userPrompt ()
 };
 
 function structorNumInGrid (num){
@@ -54,7 +55,7 @@ num + "       "
 function userPrompt (){
     inquirer.prompt([
         {
-            message:"What is the item ID for the product you desire?",
+            message:"What is the item ID for the product you would like to purchase?",
             name:"id"
 
         },
@@ -70,4 +71,3 @@ var unitsOrdered = res.units;
     })
 };
 
-userPrompt();
