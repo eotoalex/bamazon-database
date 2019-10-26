@@ -1,15 +1,19 @@
+require("dotenv").config();
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 var keys = require("./keys.js");
 
+
 var connection = mysql.createConnection({
-    host:'localhost',
-    port:3306,
-    user:'root',
-    password:"010010110Up",
-    database:'bamazon'
+    host:keys.bamazon_db.hst,
+    port: keys.bamazon_db.port,
+    user: keys.bamazon_db.usr,
+    password: keys.bamazon_db.secret,
+    database: keys.bamazon_db.db
 });
-console.log(keys.bamazon_db.secret)
+
+
+
 connection.connect(function(err){
     if(err) throw err;
     console.log('connected as id ' + connection.threadId);

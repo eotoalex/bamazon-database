@@ -4,6 +4,7 @@
   "description": "This is my first attempt at building a mySQL database and connecting it to my nodeJS application.",
   "main": "bamazonCustomer.js",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "inquirer": "^7.0.0",
     "mysql": "^2.17.1"
   },
